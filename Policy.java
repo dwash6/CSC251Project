@@ -27,15 +27,15 @@ public class Policy { //begin class
       weight = 0.0;
    }
    //constructor that accepts arguments
-   public Policy(int num, String pname, String fname, String lname, int a, String s, double h, double w) {
-      num = policyNum;
-      pname = providerName;
-      fname = firstName;
-      lname = lastName;
-      a = age;
-      s = smokeStatus;
-      h = height;
-      w = weight;
+   public Policy(int policyNum, String providerName, String firstName, String lastName, int age, String smokeStatus, double height, double weight) {
+      this.policyNum = policyNum;
+      this.providerName = providerName;
+      this.firstName = firstName;
+      this.lastName = lastName;
+      this.age = age;
+      this.smokeStatus = smokeStatus;
+      this.height = height;
+      this.weight = weight;
    }
    
    //accesser & mutator methods!
@@ -132,6 +132,6 @@ public class Policy { //begin class
          price = ((getBMI() - 35) * 20) + price;
       }
       
-      return price;
+      return BASE_FEE + price;
    }
 } //end class

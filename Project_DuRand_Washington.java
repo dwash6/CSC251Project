@@ -18,6 +18,9 @@ public class Project_DuRand_Washington { //begin class
       double height;
       double weight;
       
+      int smokers = 0;
+      int non_smokers = 0;
+      
       //begin while loop to loop through policy holder's information
       while(file.hasNext()) {
          //begin assigning values to variables using text from file
@@ -34,13 +37,19 @@ public class Project_DuRand_Washington { //begin class
          if(file.hasNext()) {
             file.nextLine();//this handles the case where we reach the end of the file - makes sure we don't get an exception
          }
-         else {
-            break;
-         }
+         
          file.nextLine();
       
       //build Policy object using constructor with arguments
       Policy p = new Policy(pNumber, pName, fName, lName, age, smoke, height, weight);
+      
+      //if statement to tally smokers/non-smokers
+      if(smoke.equalsIgnoreCase("smoker")) {
+         smokers++;
+      }
+      else if(smoke.equalsIgnoreCase("non-smoker")) {
+         non_smokers++;
+      }
       
       //display output using accessor methods
        System.out.println("\nPolicy Number: " + p.getPolicyNumber());
@@ -53,7 +62,11 @@ public class Project_DuRand_Washington { //begin class
        System.out.println("Policyholder's Weight: " + p.getWeight() + " pounds");
        System.out.printf("Policyholder's BMI: %.2f", p.getBMI());
        System.out.printf("\nPolicy Price: $%,.2f\n", p.getPolicyPrice());
+       
+       
      } //end while loop
-   
+   //print smokers/non-smokers
+   System.out.println("\nThe number of policies with a smoker is: " + smokers);
+   System.out.print("The number of policies with a non-smoker is: " + non_smokers + "\n");
    } //end main method
 } //end class

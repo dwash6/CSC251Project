@@ -41,67 +41,101 @@ public class Policy { //begin class
    //accesser & mutator methods!
    
    //setters
+   /* setPolicyNum(num) method
+      @param - policy number
+   **/
    public void setPolicyNum(int num) {
       num = policyNum;
    }
-   
+   /* setProviderName(pname) method
+      @param - provider name
+   **/
    public void setProviderName(String pname) {
       pname = providerName;
    }
-   
+   /* setFirstName(fname) method
+      @param - first name
+   **/
    public void setFirstName(String fname) {
       fname = firstName;
    }
-   
+   /* setLastName(lname) method
+      @param - last name
+   **/
    public void setLastName(String lname) {
       lname = lastName;
    }
-   
+   /* setAge(a) method
+      @param - age
+   **/
    public void setAge(int a) {
       a = age;
    }
-   
+   /* setSmokeStatus(s) method
+      @param - smoke status
+   **/
    public void setSmokeStatus(String s){
       s = smokeStatus;
    }
-   
+   /* setHeight(h) method
+      @param - height
+   **/
    public void setHeight(double h) {
       h = height;
    }
-   
+   /* setWeight(w) method
+      @param - weight
+   **/
    public void setWeight(double w) {
       w = weight;
    }
    
    //getters
+   /* getPolicyNumber() method
+      @return - policy number
+   **/
    public int getPolicyNumber() {
       return policyNum;
    }
-   
+   /* getProviderName() method
+      @return - provider name
+   **/
    public String getProviderName() {
       return providerName;
    }
-   
+   /* getFirstName() method
+      @return - first name
+   **/
    public String getFirstName() {
       return firstName;
    }
-   
+   /* getLastName() method
+      @return - last name
+   **/
    public String getLastName() {
       return lastName;
    }
-   
+   /* getAge() method
+      @return - age
+   **/
    public int getAge() {
       return age;
    }
-   
+   /* getSmokeStatus() method
+      @return - smoke status
+   **/
    public String getSmokeStatus() {
       return smokeStatus;
    }
-   
+   /* getHeight() method
+      @return - height
+   **/
    public double getHeight() {
       return height;
    }
-   
+   /* getWeight() method
+      @return - weight
+   **/
    public double getWeight() {
       return weight;
    }

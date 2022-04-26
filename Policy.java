@@ -5,6 +5,8 @@ public class Policy { //begin class
    //user's insurance info
    private int policyNum;
    private String providerName;
+   
+   private static int policiesMade = 0;
 
 
    //constructors!
@@ -18,6 +20,7 @@ public class Policy { //begin class
    public Policy(int policyNum, String providerName) {
       this.policyNum = policyNum;
       this.providerName = providerName;
+      policiesMade++;
    }
    
    //accesser & mutator methods!
@@ -48,6 +51,13 @@ public class Policy { //begin class
    **/
    public String getProviderName() {
       return providerName;
+   }
+   
+   /* getPoliciesMade() method
+      @return - number of policies that were made
+   **/
+   public int getPoliciesMade() {
+      return policiesMade;
    }
    
    //toString method for output

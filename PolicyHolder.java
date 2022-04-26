@@ -151,5 +151,17 @@ public class PolicyHolder { //begin class
       return BASE_FEE + price;
    }
    
+   //toString for output
+   public String toString() {
+      return String.format("\nPolicyholder's First Name: " + firstName +
+             "\nPolicyholder's Last Name: " + lastName +
+             "\nPolicyholder's Age: " + age +
+             "\nPolicyholder's Smoking Status (Y/N): " + smokeStatus +
+             "\nPolicyholder's Height: %,.1f inches\n" +  
+             "Policyholder's Weight: %,.1f pounds\n" + 
+             "Policyholder's BMI: %,.2f\n" +
+             "Policy Price: $%,.2f\n\n", height, weight, getBMI(), getPolicyPrice());
+   }
+   
    
 } //end class

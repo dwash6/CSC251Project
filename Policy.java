@@ -7,6 +7,8 @@ public class Policy { //begin class
    private String providerName;
    
    private static int policiesMade = 0;
+   
+   private PolicyHolder pHolder; //demonstrates a Policy that 'has a' PolicyHolder
 
 
    //constructors!
@@ -15,11 +17,13 @@ public class Policy { //begin class
    public Policy() {
       policyNum = 0;
       providerName = "";
+      PolicyHolder pHolder;
    }
    //constructor that accepts arguments
-   public Policy(int policyNum, String providerName) {
+   public Policy(int policyNum, String providerName, PolicyHolder holder) {
       this.policyNum = policyNum;
       this.providerName = providerName;
+      this.pHolder = new PolicyHolder(holder);
       policiesMade++;
    }
    
@@ -60,10 +64,17 @@ public class Policy { //begin class
       return policiesMade;
    }
    
+   /* getPolicyHolder() method
+      @return - returns deep copy of a PolicyHolder object
+   **/
+   public PolicyHolder getPolicyHolder() {
+      return new PolicyHolder(pHolder);
+   }
+   
    //toString method for output
    public String toString() {
       return String.format("Policy Number: " + policyNum + 
-      "\nProvider Name: " + providerName);
+      "\nProvider Name: " + providerName + pHolder);
    }
    
 } //end class

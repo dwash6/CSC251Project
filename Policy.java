@@ -50,6 +50,10 @@ public class Policy { //begin class
       return providerName;
    }
    
-   
+   //toString method for output
+   public String toString() {
+      return String.format("Policy Number: " + policyNum + 
+      "\nProvider Name: " + providerName);
+   }
    
 } //end class
